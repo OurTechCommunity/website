@@ -16,6 +16,7 @@ on:
             - "static/**"
             - index.html
             - robots.txt
+    workflow_dispatch: # Allows manual triggering of workflow
 
 jobs:
     publish-web-site:
