@@ -40,6 +40,10 @@ h2 {
 	margin: 10em 0 5em 0;
 }
 
+#cta-wrapper a:hover {
+	box-shadow: 0 0 8px #bdbdbd;
+}
+
 #white-bg-cta {
 	color: black;
 	background-color: #e0e0e0;
