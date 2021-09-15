@@ -37,7 +37,7 @@ h2 {
 }
 
 #ctas {
-	margin: 10em 0;
+	margin: 10em 0 5em 0;
 }
 
 #cta {
@@ -62,6 +62,11 @@ h2 {
 	text-decoration: none;
 }
 
+a img {
+	width: 8vw;
+	height: auto;
+}
+
 @media screen and (max-width: 600px) {
 	h1 {
 		letter-spacing: 5px;
@@ -70,6 +75,11 @@ h2 {
 	#ctas {
 		display: flex;
 		flex-direction: column;
-		margin: 5em 0;
+		margin: 5em 0 3em 0;
+	}
+
+	a img {
+		width: 20vw;
+		height: auto;
 	}
 }
