@@ -31,27 +31,28 @@ h1 {
 
 h2 {
 	text-align: center;
-	margin: 0 0.5em;
+	margin: 0 1em;
 	font-size: 20px;
 	font-size: clamp(20px, 2vw, 25px);
 }
 
-#ctas {
+#cta-wrapper {
 	margin: 10em 0 5em 0;
 }
 
-#cta {
+#white-bg-cta {
 	color: black;
 	background-color: #e0e0e0;
 	margin: 1em 0.5em;
 	padding: 0.25em 0.75em;
 	border-radius: 40px;
 	font-size: 25px;
-	font-size: clamp(20px, 3vw, 30px);
+	font-size: clamp(21px, 3vw, 30px);
 	text-decoration: none;
+	text-align: center;
 }
 
-#catchup-cta {
+#black-bg-cta {
 	color: #fafafa;
 	margin: 1em 0.5em;
 	padding: 0.25em 0.75em;
@@ -60,6 +61,7 @@ h2 {
 	font-size: 25px;
 	font-size: clamp(20px, 3vw, 30px);
 	text-decoration: none;
+	text-align: center;
 }
 
 a img {
@@ -72,7 +74,7 @@ a img {
 		letter-spacing: 5px;
 	}
 
-	#ctas {
+	#cta-wrapper {
 		display: flex;
 		flex-direction: column;
 		margin: 5em 0 3em 0;
