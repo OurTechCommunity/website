@@ -7,6 +7,7 @@ on:
             - ".github/workflows/publish-web-site.yaml"
             - "static/**"
             - index.html
+            - team.html
             - robots.txt
             - CNAME
     pull_request:
@@ -16,6 +17,7 @@ on:
             - ".github/workflows/publish-web-site.yaml"
             - "static/**"
             - index.html
+            - team.html
             - robots.txt
             - CNAME
     workflow_dispatch: # Allows manual triggering of workflow
@@ -61,7 +63,7 @@ jobs:
                       rm -rf ./*
 
                       # Get latest source
-                      git restore -s "$BRANCH_NAME" static index.html robots.txt CNAME
+                      git restore -s "$BRANCH_NAME" static index.html team.html robots.txt CNAME
                   fi
 
             - name: Deploy to GitHub Pages
