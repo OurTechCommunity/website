@@ -145,6 +145,10 @@ a img {
 	margin: 0.5em;
 }
 
+footer {
+	margin: 2em 0.5em;
+}
+
 @media screen and (max-width: 1024px) {
 	.team-container {
 		flex-direction: column;
