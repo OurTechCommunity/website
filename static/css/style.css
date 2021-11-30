@@ -20,10 +20,9 @@ body {
 	align-items: center;
 }
 
-nav
-{
-    position: absolute;
-    right: 0;
+nav {
+	position: absolute;
+	right: 0;
 }
 
 nav ul {
@@ -105,58 +104,55 @@ a img {
 	height: auto;
 }
 
-.team-img
-{
-    border-radius: 50%;
-    margin: 1em;
+.team-img {
+	border-radius: 50%;
+	margin: 1em;
 }
 
-.details
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
+.details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 20px;
 	font-size: clamp(20px, 2vw, 25px);
-    font-weight: 700;
+	font-weight: 700;
 }
 
-.designation
-{
-    font-weight: 100;
-    margin-bottom: 0.5em;
+.designation {
+	font-weight: 100;
+	margin-bottom: 0.5em;
 }
 
-.team-container
-{
-    display: flex;
-    justify-content: center;
+.team-container {
+	display: flex;
+	justify-content: center;
 }
 
-.team-wrapper
-{
-    margin: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.team-wrapper {
+	margin: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.links
-{
-    display: flex;
+.links {
+	display: flex;
 }
 
 .links a img {
 	width: 1.5em;
 	height: auto;
-    margin: 0.5em;
+	margin: 0.5em;
+}
+
+footer {
+	margin: 2em 0.5em;
 }
 
 @media screen and (max-width: 1024px) {
-    .team-container
-    {
-        flex-direction: column;
-    }    
+	.team-container {
+		flex-direction: column;
+	}
 }
 
 @media screen and (max-width: 600px) {
