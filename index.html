@@ -30,6 +30,8 @@
 			content="https://user-images.githubusercontent.com/50140864/133310100-75f137e4-a769-42bd-a099-f4714f1fc35f.png"
 		/>
 
+		<script defer src="static/js/script.js"></script>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -49,14 +51,39 @@
 	</head>
 
 	<body>
-        <nav>
-            <ul class="navbar-ul">
-                <li><a href="team.html">Our Team</a></li>
-                
-            </ul>
-        </nav>
+		<header>
+			<nav>
+				<div class="burger-menu">
+					<div class="line-1"></div>
+					<div class="line-2"></div>
+					<div class="line-3"></div>
+				</div>
+
+				<ul class="navbar-ul hide-burger-menu burger-menu-dropdown">
+					<li><a href="/">Home</a></li>
+					<li>
+						<a
+							href="https://catchup.ourtech.community"
+							target="_blank"
+							rel="noreferrer"
+							>OTC CatchUp</a
+						>
+					</li>
+					<li><a href="team.html">Our Team</a></li>
+					<li>
+						<a
+							href="https://links.ourtech.community"
+							target="_blank"
+							rel="noreferrer"
+							>All Links</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
 		<h1>Our Tech Community</h1>
-		<h2>A Tech-loving open-to-all community.</h2>
+		<h2>A Tech-loving open-to-all community</h2>
 
 		<div id="cta-wrapper">
 			<a
@@ -64,7 +91,7 @@
 				href="https://t.me/OurTechComm"
 				target="_blank"
 				rel="noreferrer"
-				>Join Us on Telegram</a
+				>Join us on Telegram</a
 			>
 
 			<a id="black-bg-cta" href="https://catchup.ourtech.community"
