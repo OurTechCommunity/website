@@ -3,6 +3,7 @@
 	src: url("../fonts/anaktoria.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 * {
@@ -148,6 +149,30 @@ a img {
 	margin: 0.5em;
 }
 
+#coc-contents {
+	width: 90vw;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 2em;
+}
+
+#coc-contents h2 {
+	margin: 1em 0 0.5em 0;
+}
+
+#coc-contents h3 {
+	margin: 0.75em 0 0.5em 0;
+}
+
+ul {
+	list-style: inside;
+}
+
+p {
+	margin: 0.25em 0;
+}
+
 footer {
 	margin: 2em 0.5em;
 }
@@ -167,6 +192,10 @@ footer {
 		display: flex;
 		flex-direction: column;
 		margin: 5em 0 3em 0;
+	}
+
+	a {
+		word-break: break-all;
 	}
 
 	a img {
