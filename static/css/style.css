@@ -111,6 +111,8 @@ a img {
 .team-img {
 	border-radius: 50%;
 	margin: 1em;
+	max-width: 200px;
+	max-height: 200px;
 }
 
 .details {
@@ -127,6 +129,13 @@ a img {
 	margin-bottom: 0.5em;
 }
 
+#strikethrough {
+	margin: 0 -1em;
+	padding: 0 1em;
+	text-decoration: line-through yellow;
+	text-decoration-thickness: 3px;
+}
+
 .team-container {
 	display: flex;
 	justify-content: center;
@@ -139,8 +148,21 @@ a img {
 	align-items: center;
 }
 
+.cto-visible .team-wrapper:not(.cto-visible) {
+	display: none;
+}
+
+:not(.cto-visible) .team-wrapper.cto {
+	display: none;
+}
+
+.cto-visible .team-wrapper.cto {
+	display: block;
+}
+
 .links {
 	display: flex;
+	justify-content: center;
 }
 
 .links a img {
@@ -202,6 +224,10 @@ footer {
 		width: 20vw;
 		height: auto;
 	}
+}
+
+.clickable {
+	cursor: pointer;
 }
 
 /* ======================================================= BURGER MENU ===================================================== */
