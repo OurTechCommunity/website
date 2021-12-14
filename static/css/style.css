@@ -129,6 +129,13 @@ a img {
 	margin-bottom: 0.5em;
 }
 
+#strikethrough {
+	margin: 0 -1em;
+	padding: 0 1em;
+	text-decoration: line-through yellow;
+	text-decoration-thickness: 3px;
+}
+
 .team-container {
 	display: flex;
 	justify-content: center;
@@ -155,6 +162,7 @@ a img {
 
 .links {
 	display: flex;
+	justify-content: center;
 }
 
 .links a img {
