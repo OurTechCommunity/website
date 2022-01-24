@@ -171,7 +171,7 @@ a img {
 	margin: 0.5em;
 }
 
-#coc-contents {
+#main-content {
 	width: 90vw;
 	display: flex;
 	flex-direction: column;
@@ -179,20 +179,24 @@ a img {
 	margin-bottom: 2em;
 }
 
-#coc-contents h2 {
+#main-content h2 {
 	margin: 1em 0 0.5em 0;
 }
 
-#coc-contents h3 {
+#main-content h3 {
 	margin: 0.75em 0 0.5em 0;
 }
 
+#main-content > ul > li {
+	margin-bottom: 0.75em;
+}
+
 ul {
-	list-style: inside;
+	margin-left: 1em;
 }
 
 p {
-	margin: 0.25em 0;
+	margin-bottom: 1em;
 }
 
 footer {
