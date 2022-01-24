@@ -6,22 +6,10 @@ on:
         paths:
             - ".github/workflows/publish-web-site.yaml"
             - "static/**"
-            - index.html
-            - team.html
-            - coc.html
+            - "**.html"
             - robots.txt
             - CNAME
-    pull_request:
-        branches:
-            - main
-        paths:
-            - ".github/workflows/publish-web-site.yaml"
-            - "static/**"
-            - index.html
-            - team.html
-            - coc.html
-            - robots.txt
-            - CNAME
+
     workflow_dispatch: # Allows manual triggering of workflow
 
 jobs:
@@ -29,64 +17,16 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Move files into the `dist` directory
               run: |
-                  # Setup repository
-                  git init .
-                  git remote add origin "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git"
-
-                  # Fetch and checkout code
-                  BRANCH_NAME="branch";
-                  case "$GITHUB_REF" in
-                      refs/heads/*)
-                          BRANCH_NAME="${GITHUB_REF#refs/heads/}";;
-                      pull/*/head)
-                          BRANCH_NAME="${GITHUB_REF#pull/}";
-                          BRANCH_NAME="${GITHUB_REF%/head}";
-                          BRANCH_NAME="pull-request-${BRANCH_NAME}";
-                  esac
-
-                  git fetch origin "${GITHUB_REF}:${BRANCH_NAME}" --depth 1;
-                  git switch "$BRANCH_NAME";
-
-                  # Switch to gh-pages if on main
-                  if [ "$BRANCH_NAME" = "main" ]; then
-                      # Try to fetch gh-pages branch
-                      if ! git fetch origin gh-pages; then
-                          # If the branch doesn't exist, then create an orphan branch
-                          echo "Could not find gh-pages branch, creating as orphan"
-                          git switch --orphan gh-pages
-                      else
-                          # Else, switch to the branch
-                          echo "Switching to gh-pages branch"
-                          git switch gh-pages
-                      fi
-                      
-                      # Delete all old files
-                      rm -rf ./*
-
-                      # Get latest source
-                      git restore -s "$BRANCH_NAME" static index.html team.html coc.html robots.txt CNAME
-                  fi
+                  mkdir dist
+                  mv static CNAME *.html robots.txt dist
 
             - name: Deploy to GitHub Pages
-              run: |
-                  # Skip deploy if not on main
-                  BRANCH_NAME="${GITHUB_REF#refs/heads/}"
-                  if [ "${BRANCH_NAME}" != "main" ]; then
-                    echo "Skipping deployment since branch is '${BRANCH_NAME}', not main"
-                    exit 0
-                  fi
-
-                  # Add modified files
-                  git add .
-
-                  # Set user
-                  git config user.name  "Auto deploy GitHub Pages"
-                  git config user.email "cd-deploy-gh-pages@bot"
-
-                  # Commit changes
-                  git commit -m "Deploy to pages: $(date +'%Y-%m-%d %T')"
-
-                  # Remove 'https://' from beginning of REPOSITORY_URL
-                  REPOSITORY_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git"
-                  git push "https://X-Access-Token:${{ secrets.GITHUB_TOKEN }}@${REPOSITORY_URL:8}" gh-pages
+              uses: JamesIves/github-pages-deploy-action@v4.2.2
+              with:
+                  branch: gh-pages
+                  folder: dist
+                  clean: true
