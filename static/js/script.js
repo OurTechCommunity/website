@@ -30,3 +30,15 @@ if (window.location.pathname.startsWith("/team"))
 		},
 		{ passive: true }
 	);
+
+// For 'Two Years of OTC' page
+if (window.location.pathname.startsWith("/two-years"))
+	window.addEventListener(
+		"load",
+		() => {
+			confetti.maxCount = 100;
+			setTimeout(() => confetti.start(), 1000);
+			setTimeout(() => confetti.stop(), 2000);
+		},
+		{ passive: true }
+	);
