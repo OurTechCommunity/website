@@ -191,6 +191,41 @@ a img {
 	margin-bottom: 0.75em;
 }
 
+.event {
+	width: 100%;
+	margin-bottom: 1em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #424242;
+}
+
+.event-date {
+	margin-bottom: 2em;
+}
+
+.event-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+	gap: 1em;
+}
+
+.event-grid img {
+	width: 100%;
+	max-width: 90vw;
+	border-radius: 5px;
+}
+
+.event-grid iframe {
+	border-radius: 5px;
+	width: 100%;
+	max-width: 90vw;
+	aspect-ratio: 16/9;
+}
+
+.one-event-grid iframe,
+.one-event-grid img {
+	width: 50%;
+}
+
 ul {
 	margin-left: 1em;
 }
@@ -206,6 +241,11 @@ footer {
 @media screen and (max-width: 1024px) {
 	.team-container {
 		flex-direction: column;
+	}
+
+	.one-event-grid iframe,
+	.one-event-grid img {
+		width: 100%;
 	}
 }
 
