@@ -193,13 +193,13 @@ a img {
 
 .event {
 	width: 100%;
-	margin-bottom: 1em;
-	padding-bottom: 2em;
+	margin-bottom: 2em;
+	padding-bottom: 1.5em;
 	border-bottom: 1px solid #424242;
 }
 
 .event-date {
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 }
 
 .event-grid {
