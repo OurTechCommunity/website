@@ -142,6 +142,7 @@ a img {
 .team-container {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .team-wrapper {
