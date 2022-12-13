@@ -129,6 +129,13 @@ a img {
 
 .designation {
 	font-weight: 100;
+	margin-bottom: 0.1em;
+}
+
+.pronouns {
+	font-weight: 100;
+	font-size: 15px;
+	font-size: clamp(14px, 2vw, 18px);
 	margin-bottom: 0.5em;
 }
 
