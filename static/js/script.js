@@ -31,8 +31,8 @@ if (window.location.pathname.startsWith("/team"))
 		{ passive: true }
 	);
 
-// For 'Two Years of OTC' page
-if (window.location.pathname.startsWith("/two-years"))
+// For '<x> Years of OTC' pages
+if (window.location.pathname.indexOf("-years") > -1)
 	window.addEventListener(
 		"load",
 		() => {
