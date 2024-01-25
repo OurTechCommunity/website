@@ -211,8 +211,35 @@ ul {
 	margin-left: 1em;
 }
 
+li div {
+	display: flex;
+}
+
+li div > ul {
+	flex: 0.6;
+	margin-right: 1em;
+}
+
+li div > img {
+	width: 1vw; /* Added just to give a dummy width to the image, but the `flex` property has precedence */
+	flex: 0.4;
+	aspect-ratio: 16/9;
+	border-radius: 5px;
+}
+
 p {
 	margin-bottom: 1em;
+}
+
+.extra-bottom-margin {
+	margin-bottom: 2.5em;
+}
+
+iframe {
+	border-radius: 5px;
+	aspect-ratio: 16/9;
+	min-width: 50vw;
+	margin: 1em auto;
 }
 
 footer {
@@ -227,6 +254,21 @@ footer {
 	.one-event-grid iframe,
 	.one-event-grid img {
 		width: 100%;
+	}
+
+	li div {
+		flex-direction: column;
+	}
+
+	li div > ul {
+		flex: 1;
+		margin-right: 0;
+	}
+
+	li div > img {
+		flex: 1;
+		min-width: 50vw;
+		margin: 1em auto;
 	}
 }
 
@@ -248,6 +290,14 @@ footer {
 	a img {
 		width: 20vw;
 		height: auto;
+	}
+
+	li div > img {
+		min-width: 80vw;
+	}
+
+	iframe {
+		min-width: 80vw;
 	}
 }
 
