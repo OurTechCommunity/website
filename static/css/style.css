@@ -111,6 +111,10 @@ a img {
 	height: auto;
 }
 
+#six-years-collage-img {
+	width: 50vw;
+}
+
 .team-img {
 	border-radius: 50%;
 	margin: 1em;
