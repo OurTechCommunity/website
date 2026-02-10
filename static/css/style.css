@@ -207,6 +207,10 @@ a img {
 	margin: 0.75em 0 0.5em 0;
 }
 
+#main-content > ul {
+	width: 100%;
+}
+
 #main-content > ul > li {
 	margin-bottom: 0.75em;
 }
