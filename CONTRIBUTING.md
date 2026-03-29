@@ -18,6 +18,8 @@
     -   Write meaningful commit messages and include the number (`#`) of the issue being resolved (if any) at the end of the commit message.
 
         Example: `:bug: fix: Resolve 'isCorrect' function error (#0)`
+    
+    -   Format your code with [Prettier](https://prettier.io/), and set "printWidth" to 80.
 
 -   Open a Pull Request (PR).
     -   [Learn how to open a PR](https://github.com/firstcontributions/first-contributions).
